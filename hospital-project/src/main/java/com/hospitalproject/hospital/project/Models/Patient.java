@@ -1,6 +1,6 @@
 package com.hospitalproject.hospital.project.Models;
 
-import com.hospitalproject.hospital.project.Gender;
+import com.hospitalproject.hospital.project.Enums.Gender;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,6 +22,6 @@ public class Patient {
     @Enumerated(value=EnumType.STRING)
     private Gender gender;
 
-    @OneToMany(mappedBy = "foreignPatient",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "patient",cascade = CascadeType.ALL)
     private List<Appointment>appointments = new ArrayList<>();
 }

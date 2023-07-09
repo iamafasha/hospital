@@ -19,7 +19,7 @@ public class Appointment {
 
     @ManyToOne
     @JoinColumn // optional
-    private Patient foreignPatient;
+    private Patient patient;
 
     @ManyToOne
     @JoinColumn
